@@ -13,7 +13,6 @@ Select ONE Additional
 [ no ] Feature 5 - Use .append() method
 -->
 
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -22,40 +21,75 @@ Select ONE Additional
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <button id="mem1-button">Memory #1</button>
-    <button id="mem2-button">Memory #2</button>
-    <button id="mem3-button">Memory #3</button>
-    <h1>My Top 3 Memories of <span>This Year</span></h1>
+    <button id="mem1-button">Movie #1</button>
+    <button id="mem2-button">Movie #2</button>
+    <button id="mem3-button">Movie #3</button>
+    <h1 class="MazeRunner">My Top 3 Favorite moviesof all time</h1>
     <ol>
       <li>
-        <h3 id="mem1">Memory #1</h3>
-        <p>More about this memory.</p>
+        <h2 id="mem1">Movie #1</h2>
+        <p id="mem1-paragraph"></p>
+        <img id="Maze-Runner-The-Scorch-Trials" />
       </li>
 
       <li>
-        <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
+        <h3 id="mem2">Movie #2</h3>
+        <p id="mem2-paragraph"></p>
+        <img id="The-Maze-Runner" />
       </li>
 
       <li>
-        <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
+        <h4 id="mem3">Movie #3</h4>
+        <p id="mem3-paragraph"></p>
+        <img id="Maze-Runner-The-Death-Cure" />
       </li>
     </ol>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+      $(".MazeRunner").text("My Top 3 Favorite Maze Runner movies of all time");
       $("#mem1-button").click(function () {
-        $("#mem1").css("color", "purple");
+        $("#mem1").css("color", "orange");
+        $("#mem1").text("Maze Runner: The Scorch Trials");
+        $("#Maze-Runner-The-Scorch-Trials").attr(
+          "src",
+          "https://shsroundtable.com/wp-content/uploads/2015/09/Scorch_Trials_Concept_Art.jpg"
+        );
+        $("#mem1-paragraph").text(
+          "The Scorch Trials is one of my most favorite Maze Runner movies cause it has zombies and a lot of cool chase scenes."
+        );
       });
 
       $("#mem2-button").click(function () {
-        $("#mem2").css("color", "blue");
+        $("#mem2").css("color", "green");
+        $("#mem2").text("The Maze Runner");
+        $("#The-Maze-Runner").attr(
+          "src",
+          "https://m.media-amazon.com/images/M/MV5BMjUyNTA3MTAyM15BMl5BanBnXkFtZTgwOTEyMTkyMjE@._V1_.jpg"
+        );
+        $("#mem2-paragraph").text(
+          "The first Maze Runner is a classic and the concept is elite."
+        );
       });
 
       $("#mem3-button").click(function () {
-        $("#mem3").css("color", "green");
+        $("#mem3").css("color", "navy");
+        $("#mem3").text("Maze Runner: The Death Cure");
+        $("#Maze-Runner-The-Death-Cure").attr(
+          "src",
+          "https://lumiere-a.akamaihd.net/v1/images/mazerunnerdeathcure_feature-poster_584x800_62521e27.jpeg"
+        );
+        $("#mem3-paragraph").text(
+          "Not as good as the first too but still an enjoyable watch."
+        );
       });
+      $("h1").css("color", "brown");
+      var mazeBoy = $("<p>");
+      mazeBoy.text(
+        "All the maze runner movies are goated and im in love with the entire franchise ngl."
+      );
+      mazeBoy.addClass("mazeRunning");
+      $("body").append(mazeBoy);
     </script>
   </body>
 </html>
